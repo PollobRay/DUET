@@ -1,0 +1,27 @@
+#include<stdio.h>
+main()
+{
+    int a[10],i,j,temp,min,max;
+    min=10;
+    max=min+9;
+    rand();
+    for(i=0;i<=9;i++)
+    {
+        temp=rand()%10+min;
+        for(j=0;j<=9;j++)
+        {
+            if(temp==a[j])
+            {
+                break;
+            }
+        }
+        if(i==j)
+        {
+            a[i]=temp;
+        }
+        else
+            i--;
+    }
+    for(i=0;i<10;i++)
+        printf("%d",a[i]);
+}
